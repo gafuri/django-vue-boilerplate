@@ -1,4 +1,4 @@
-# django-vue-template
+# django-vue-boilerplate
 
 > Django x VuejS boilerplate
 
