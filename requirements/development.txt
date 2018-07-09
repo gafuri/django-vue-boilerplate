@@ -1,0 +1,2 @@
+-r defaults.txt
+django-shell-plus==1.1.7
