@@ -12,7 +12,7 @@ BASE_DIR = os.path.abspath('')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ozo@1plj%&ia7&7lif&g)hk%*f$%+xih*@36uwqibyzdth1vmg'
 
-EMAIL settings
+# EMAIL settings
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_HOST_USER = 'robot@yandex.com'
