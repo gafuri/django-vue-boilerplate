@@ -12,7 +12,7 @@ BASE_DIR = os.path.abspath('')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ozo@1plj%&ia7&7lif&g)hk%*f$%+xih*@36uwqibyzdth1vmg'
 
-# EMAIL settings
+EMAIL settings
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_HOST_USER = 'robot@yandex.com'
@@ -131,7 +131,16 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.FormParser',
         'rest_framework.parsers.MultiPartParser',
         'rest_framework.parsers.JSONParser',
-    )
+    ),
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+        'rest_framework.throttling.ScopedRateThrottle',
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '10/minute',
+        'user': '60/minute',
+    },
 }
 
 JSON_API_FORMAT_KEYS = 'underscore'
