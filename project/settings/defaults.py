@@ -13,11 +13,11 @@ BASE_DIR = os.path.abspath('')
 SECRET_KEY = 'ozo@1plj%&ia7&7lif&g)hk%*f$%+xih*@36uwqibyzdth1vmg'
 
 # EMAIL settings
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_HOST_USER = 'robot@yandex.com'
-EMAIL_HOST_PASSWORD = 'password'
-EMAIL_PORT = 465
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.yandex.ru'
+# EMAIL_HOST_USER = 'robot@yandex.com'
+# EMAIL_HOST_PASSWORD = 'password'
+# EMAIL_PORT = 465
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework.authtoken',
-    'django_extensions'
+    'django_extensions',
+    'reauth',
 ]
 
 MIDDLEWARE = [
