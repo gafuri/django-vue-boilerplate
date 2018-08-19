@@ -22,6 +22,8 @@ SECRET_KEY = 'ozo@1plj%&ia7&7lif&g)hk%*f$%+xih*@36uwqibyzdth1vmg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+AUTH_USER_MODEL = 'reauth.User'
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -170,7 +172,7 @@ JWT_AUTH = {
     'JWT_VERIFY': True,
     'JWT_VERIFY_EXPIRATION': True,
     'JWT_LEEWAY': 0,
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3600),
     'JWT_AUDIENCE': None,
     'JWT_ISSUER': None,
 
